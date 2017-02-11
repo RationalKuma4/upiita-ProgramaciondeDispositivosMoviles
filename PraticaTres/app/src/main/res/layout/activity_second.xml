@@ -1,37 +1,41 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/activity_main"
+    android:id="@+id/activity_second"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:paddingBottom="@dimen/activity_vertical_margin"
     android:paddingLeft="@dimen/activity_horizontal_margin"
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
-    tools:context="com.example.anselmo_pc.praticatres.MainActivity">
+    tools:context="com.example.anselmo_pc.praticatres.SecondActivity">
 
     <TextView
+        android:text="Apareciendo"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Hello World!"
-        android:id="@+id/texto1" />
-
-    <TextView
-        android:text="TextView"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/texto1"
+        android:id="@+id/textView2"
+        android:textSize="36sp"
+        android:layout_alignParentBottom="true"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="201dp"
-        android:id="@+id/texto" />
+        android:layout_marginBottom="197dp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/textouno"
+        android:text="Animacion: Apraricion y desaparacion"
+        android:textSize="20sp"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentStart="true" />
 
     <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
-        android:layout_alignParentEnd="true"
-        android:layout_marginEnd="22dp"
-        android:layout_marginBottom="17dp"
-        android:id="@+id/button1"
+        android:layout_alignEnd="@+id/textouno"
+        android:layout_marginEnd="14dp"
+        android:layout_marginBottom="10dp"
+        android:id="@+id/botondos"
         android:text="Siguiente" />
 </RelativeLayout>
