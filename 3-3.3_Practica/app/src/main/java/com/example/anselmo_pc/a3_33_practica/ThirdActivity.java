@@ -25,11 +25,11 @@ public class ThirdActivity extends AppCompatActivity implements View.OnClickList
         Drawable imagen4=rsources.getDrawable(R.drawable.d);
         Drawable imagen5=rsources.getDrawable(R.drawable.e);
 
-        _animation.addFrame(imagen1, 3000);
-        _animation.addFrame(imagen2, 3000);
-        _animation.addFrame(imagen3, 3000);
-        _animation.addFrame(imagen4, 3000);
-        _animation.addFrame(imagen5, 3000);
+        _animation.addFrame(imagen1, 2000);
+        _animation.addFrame(imagen2, 2000);
+        _animation.addFrame(imagen3, 2000);
+        _animation.addFrame(imagen4, 2000);
+        _animation.addFrame(imagen5, 2000);
 
         ImageView image=(ImageView)findViewById(R.id.imagent);
         image.setVisibility(ImageView.VISIBLE);
