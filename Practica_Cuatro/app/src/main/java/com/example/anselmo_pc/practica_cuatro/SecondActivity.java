@@ -1,8 +1,11 @@
 package com.example.anselmo_pc.practica_cuatro;
 
+import android.content.Intent;
 import android.graphics.Typeface;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.view.View;
+import android.widget.Button;
 import android.widget.TextView;
 
 import java.util.Timer;
@@ -22,6 +25,14 @@ public class SecondActivity extends AppCompatActivity {
         _timer=new Timer("Temportizador");
         Tarea tarea=new Tarea();
         _timer.scheduleAtFixedRate(tarea,0,_rate);
+
+        Button sig=(Button)findViewById(R.id.boton2);
+        sig.setOnClickListener(new View.OnClickListener() {
+            public void onClick(View v) {
+                Intent activityChangeIntent = new Intent(SecondActivity.this, ThirdActivity.class);
+                startActivity(activityChangeIntent);
+            }
+        });
     }
 
     @Override
