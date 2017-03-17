@@ -30,7 +30,7 @@ public class ThirdActivity extends AppCompatActivity {
         Button sig=(Button)findViewById(R.id.boton3);
         sig.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
-                Intent activityChangeIntent = new Intent(ThirdActivity.this, ThirdActivity.class);
+                Intent activityChangeIntent = new Intent(ThirdActivity.this, FourthActivity.class);
                 startActivity(activityChangeIntent);
             }
         });
