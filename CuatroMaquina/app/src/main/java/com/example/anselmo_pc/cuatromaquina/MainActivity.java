@@ -53,15 +53,15 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         View boton1=(Button)findViewById(R.id.button1);
         boton1.setOnClickListener(this);
         View boton2=(Button)findViewById(R.id.button2);
-        boton1.setOnClickListener(this);
+        boton2.setOnClickListener(this);
         View boton3=(Button)findViewById(R.id.button3);
-        boton1.setOnClickListener(this);
+        boton3.setOnClickListener(this);
         View boton4=(Button)findViewById(R.id.button4);
-        boton1.setOnClickListener(this);
+        boton4.setOnClickListener(this);
         View boton5=(Button)findViewById(R.id.button5);
-        boton1.setOnClickListener(this);
+        boton5.setOnClickListener(this);
         View boton6=(Button)findViewById(R.id.button6);
-        boton1.setOnClickListener(this);
+        boton6.setOnClickListener(this);
     }
 
     @Override
