@@ -7,14 +7,13 @@ import android.hardware.SensorEvent;
 import android.hardware.SensorEventListener;
 import android.hardware.SensorManager;
 import android.os.AsyncTask;
-import android.support.v4.os.AsyncTaskCompat;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
 
-public class MainActivity extends AppCompatActivity implements SensorEventListener {
+public class ThirdActivity extends AppCompatActivity  implements SensorEventListener {
     int contador=0;
     double x,y,z,a,amax=0;
     double gravedad= SensorManager.STANDARD_GRAVITY;
@@ -22,7 +21,7 @@ public class MainActivity extends AppCompatActivity implements SensorEventListen
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
+        setContentView(R.layout.activity_third);
 
         tvax=(TextView)findViewById(R.id.textViewAX);
         tvay=(TextView)findViewById(R.id.textViewAY);
@@ -32,15 +31,15 @@ public class MainActivity extends AppCompatActivity implements SensorEventListen
         tvG=(TextView)findViewById(R.id.textViewG);
 
         SensorManager sensorManager=(SensorManager)getSystemService(Context.SENSOR_SERVICE);
-        Sensor acelerometro=sensorManager.getDefaultSensor(Sensor.TYPE_ACCELEROMETER);
+        Sensor acelerometro=sensorManager.getDefaultSensor(Sensor.TYPE_MAGNETIC_FIELD);
         sensorManager.registerListener(this, acelerometro, SensorManager.SENSOR_DELAY_FASTEST);
         new MiAsyncTask().execute();
 
-        Button boton = (Button)findViewById(R.id.boton1);
+        Button boton = (Button)findViewById(R.id.boton3);
         boton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent=new Intent(MainActivity.this, SecondActivity.class);
+                Intent intent=new Intent(ThirdActivity.this, FourthActivity.class);
                 startActivity(intent);
             }
         });
@@ -60,7 +59,7 @@ public class MainActivity extends AppCompatActivity implements SensorEventListen
 
     }
 
-    class MiAsyncTask extends AsyncTask<Void,Void,Void>{
+    class MiAsyncTask extends AsyncTask<Void,Void,Void> {
 
         @Override
         protected Void doInBackground(Void... params) {
