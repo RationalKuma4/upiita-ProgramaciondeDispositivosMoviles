@@ -1,12 +1,15 @@
 package com.example.anselmo_pc.practicacinco;
 
 import android.content.Context;
+import android.content.Intent;
 import android.hardware.Sensor;
 import android.hardware.SensorEvent;
 import android.hardware.SensorEventListener;
 import android.hardware.SensorManager;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.view.View;
+import android.widget.Button;
 import android.widget.TextView;
 
 public class FourthActivity extends AppCompatActivity implements SensorEventListener {
@@ -29,6 +32,15 @@ public class FourthActivity extends AppCompatActivity implements SensorEventList
 
         sensorManager=(SensorManager) getSystemService(Context.SENSOR_SERVICE);
         sensor=sensorManager.getDefaultSensor(Sensor.TYPE_ORIENTATION);
+
+        Button boton = (Button)findViewById(R.id.boton4);
+        boton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent=new Intent(FourthActivity.this, FourthActivity.class);
+                startActivity(intent);
+            }
+        });
     }
 
     @Override
